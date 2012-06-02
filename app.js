@@ -1,4 +1,5 @@
 var http = require('http'); //Loads http modules
+var url = require('url');
 
 function onRequest (request, response){
     console.log("request received");
@@ -7,9 +8,8 @@ function onRequest (request, response){
     response.end();
 }
 
-
 function start() {   
     http.createServer(onRequest).listen(80);
 }
 
-exports.start = start;
+exports.start = start
